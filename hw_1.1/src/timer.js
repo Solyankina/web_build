@@ -1,4 +1,5 @@
 import {html, clearHtml} from "./utils.js";
+import {Howl} from 'howler';
 
 export function timer() {
     const timerInput = document.getElementById("time");
@@ -36,6 +37,10 @@ export function timer() {
 
 }
 
+const sound = new Howl({
+    src: ['alarm.wav']
+});
+
 function alertTimer() {
     play();
     showMessage();
@@ -46,11 +51,11 @@ function stopAlertTimer() {
 }
 
 function play() {
-    html('wave', "<audio src=\"alarm.wav\" autoplay></audio>");
+    sound.play();
 }
 
 function stopPlay() {
-    clearHtml('wave');
+    sound.stop();
 }
 
 function showMessage() {

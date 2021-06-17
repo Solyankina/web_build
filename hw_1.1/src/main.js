@@ -3,9 +3,6 @@ import {formatError, html, clearHtml} from "./utils.js";
 import {timer} from "./timer.js";
 import {checkout} from "./checkoutlist.js";
 
-
-
-
 const dateCalcForm = document.getElementById("datecalc");
 
 dateCalcForm.addEventListener("submit", handleCalcDates);
