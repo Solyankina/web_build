@@ -1,6 +1,7 @@
 import {diffDates, diffToHtml} from "./datecalc.js";
 import {formatError, html, clearHtml} from "./utils.js";
 import {timer} from "./timer.js";
+import "./style.css";
 import {checkout} from "./checkoutlist.js";
 
 const dateCalcForm = document.getElementById("datecalc");

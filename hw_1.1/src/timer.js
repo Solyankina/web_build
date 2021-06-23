@@ -1,5 +1,6 @@
 import {html, clearHtml} from "./utils.js";
 import {Howl} from 'howler';
+import wavSound from './alarm.wav';
 
 export function timer() {
     const timerInput = document.getElementById("time");
@@ -38,7 +39,7 @@ export function timer() {
 }
 
 const sound = new Howl({
-    src: ['alarm.wav']
+    src: [wavSound]
 });
 
 function alertTimer() {
